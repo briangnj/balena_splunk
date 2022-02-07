@@ -2,13 +2,13 @@
 
 This is a simple [Splunk][splunk-link] integration that works with any of the devices supported by [Balena][balena-link].
 
-This python script collect OS performance metrics using shell commands and them sends to a specified metrics index on either Splunk Cloud or Splunk Enterprise.
+The main.py script collects OS performance metrics via shell commands and then sends to a specified metrics index on either Splunk Cloud or Splunk Enterprise.
 
-To get this project up and running on the Splunk end, you'll need to have a working [Splunk Cloud][splunk-cloud-trial] or [Splunk Enterprise][splunk-enterprise-trial] environment with the [HTTP Event Collector (HEC)][splunk-hec] enabled and accessible from the internet. You'll also need to create a HEC  authentication token and have a target metrics index available.
+To get this project up and running on the Splunk end, you'll need to have a working [Splunk Cloud][splunk-cloud-trial] or [Splunk Enterprise][splunk-enterprise-trial] environment with the [HTTP Event Collector (HEC)][splunk-hec] enabled and accessible from the internet. You'll also need to create a HEC  authentication token and have a target metrics index enabled.
 
 On the Balena end, signup for a balena account [here][signup-page], set up a device, and have a look at the [Getting Started tutorial][gettingStarted-link]. Once you are set up with balena, you will need to clone this repo locally.
 
-Follow these [steps][push-balena] to push the code to your fleet to enable the data collection. Once deployed, add three OS environment variables to enable the connection to Splunk:
+Follow these [steps][push-balena] to push the code to your fleet to enable the data collection. Once deployed, add the three OS environment variables below to enable the connection to Splunk:
 
 ```
 SPLUNK_HOST = IP address or hostname of remote Splunk host
@@ -22,7 +22,7 @@ SPLUNK_TOKEN = the Splunk authentication token for HEC access
 SPLUNK_INDEX = the name of the Splunk target index where the data will be stored
 ```
 
-The Splunk index must be a metrics index (not events).
+Note: The Splunk index must be a metrics index (not events).
 
 This is how the variables should look on the Balena console:
 ![Enable device URL](/img/device_variables.png)
