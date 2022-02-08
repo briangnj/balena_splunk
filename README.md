@@ -8,7 +8,9 @@ To get this project up and running on the Splunk end, you'll need to have a work
 
 On the Balena end, signup for a balena account [here][signup-page], set up a device, and have a look at the [Getting Started tutorial][gettingStarted-link]. Once you are set up with balena, you will need to clone this repo locally.
 
-Follow these [steps][push-balena] to push the code to your fleet to enable the data collection. Once deployed, add the three OS environment variables below to enable the connection to Splunk:
+Follow these [steps][push-balena] to push the code to your fleet to enable the data collection. Make sure to change the Dockerfile.template file to match the architecture of the target device for the [build][balena-build].
+
+Once deployed, add the three OS environment variables below to enable the connection to Splunk:
 
 ```
 SPLUNK_HOST = IP address or hostname of remote Splunk host
@@ -49,3 +51,4 @@ Here's an example search in Splunk using the load5min metric:
 [splunk-hec]:https://docs.splunk.com/Documentation/Splunk/8.2.4/Data/UsetheHTTPEventCollector
 [splunk-link]:https://www.splunk.com
 [push-balena]:https://www.balena.io/docs/learn/deploy/deployment/
+[balena-build]:https://www.balena.io/docs/learn/develop/dockerfile/
