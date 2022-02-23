@@ -1,4 +1,4 @@
-## A Simple Balena integration with Splunk
+## A Simple BalenaCloud integration with Splunk
 
 This is a simple [Splunk][splunk-link] integration that works with any of the devices supported by [Balena][balena-link].
 
