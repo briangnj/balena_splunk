@@ -1,6 +1,6 @@
 ## A Simple BalenaCloud integration with Splunk
 
-This is a simple [Splunk][splunk-link] integration that works with any of the devices supported by [Balena][balena-link].
+This is a simple [Splunk][splunk-link] metrics integration that works with any of the devices supported by [Balena][balena-link].
 
 The main.py script collects OS performance metrics via shell commands and then sends to a specified metrics index on either Splunk Cloud or Splunk Enterprise.
 
